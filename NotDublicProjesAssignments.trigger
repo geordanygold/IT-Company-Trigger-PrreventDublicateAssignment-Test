@@ -14,9 +14,9 @@ trigger NotDublicProjesAssignments on Project_Assignment__c (before insert, befo
 
 
 		For( Project_Assignment__c prAss : [Select Id, Project__c, Developer__c
-											From Project_Assignment__c
-											Where Project__c In : projesIdsNew
-											AND Developer__c In : devsIdsNew]){
+							From Project_Assignment__c
+							Where Project__c In : projesIdsNew
+							AND Developer__c In : devsIdsNew]){
 
 
 			projesIdsOld.add(prAss.Project__c);
